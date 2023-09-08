@@ -17,28 +17,28 @@ class Pessoa {
     double imc = calcularImc();
     switch (imc) {
       case < 16:
-        print("Magreza grave.");
+        print("Você está com: magreza grave.");
         break;
       case >= 16 && < 17:
-        print("Magreza moderada.");
+        print("Você está com: magreza moderada.");
         break;
       case >= 17 && < 18.5:
-        print("Magreza leve.");
+        print("Você está com: magreza leve.");
         break;
       case >= 18.5 && < 25:
-        print("Saudável.");
+        print("Você está: saudável.");
         break;
       case >= 25 && < 30:
-        print("Sobrepeso.");
+        print("Você está com: sobrepeso.");
         break;
       case >= 30 && < 35:
-        print("Obesidade grau 1.");
+        print("Você está com: obesidade grau 1.");
         break;
       case >= 35 && < 40:
-        print("Obesidade grau 2 (severa).");
+        print("Você está com: obesidade grau 2 (severa).");
         break;
       case >= 40:
-        print("Obesidade grau 3 (mórmida).");
+        print("Você está com: obesidade grau 3 (mórmida).");
         break;
       default:
         print("N/D");

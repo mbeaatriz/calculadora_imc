@@ -1,9 +1,19 @@
 import 'dart:convert';
-
+import 'dart:io';
 import 'package:calculadora_imc/calculadora_imc.dart' as calculadora_imc;
-import 'package:calculadora_imc/models/Pessoa.dart';
+import 'package:calculadora_imc/models/pessoa.dart';
+import 'package:calculadora_imc/models/utilidade.dart';
 
 void main(List<String> arguments) {
-  Pessoa p1 = new Pessoa("maria", 74, 1.65);
-  p1.classificacaoImc();
+  print("Digite seu nome:");
+  String? nome = Utilidade.lerString();
+
+  print("Digite seu peso:");
+  double? peso = Utilidade.lerDouble();
+
+  print("Digite sua altura:");
+  double? altura = Utilidade.lerDouble();
+
+  Pessoa pessoa = Pessoa(nome, peso, altura);
+  pessoa.classificacaoImc();
 }
