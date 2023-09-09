@@ -13,35 +13,34 @@ class Pessoa {
     return _peso / (_altura * _altura);
   }
 
-  void classificacaoImc() {
+  String classificacaoImc() {
     double imc = calcularImc();
+    String retorno = "N/D";
     switch (imc) {
       case < 16:
-        print("Você está com: magreza grave.");
-        break;
+        retorno = "Você está com: magreza grave.";
+
       case >= 16 && < 17:
-        print("Você está com: magreza moderada.");
-        break;
+        retorno = "Você está com: magreza moderada.";
+
       case >= 17 && < 18.5:
-        print("Você está com: magreza leve.");
-        break;
+        retorno = "Você está com: magreza leve.";
+
       case >= 18.5 && < 25:
-        print("Você está: saudável.");
-        break;
+        retorno = "Você está: saudável.";
+
       case >= 25 && < 30:
-        print("Você está com: sobrepeso.");
-        break;
+        retorno = "Você está com: sobrepeso.";
+
       case >= 30 && < 35:
-        print("Você está com: obesidade grau 1.");
-        break;
+        retorno = "Você está com: obesidade grau 1.";
+
       case >= 35 && < 40:
-        print("Você está com: obesidade grau 2 (severa).");
-        break;
+        retorno = "Você está com: obesidade grau 2 (severa).";
+
       case >= 40:
-        print("Você está com: obesidade grau 3 (mórmida).");
-        break;
-      default:
-        print("N/D");
+        retorno = "Você está com: obesidade grau 3 (mórmida).";
     }
+    return retorno;
   }
 }

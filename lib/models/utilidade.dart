@@ -10,7 +10,8 @@ class Utilidade {
     var valor = lerString();
     try {
       return double.parse(valor);
-    } catch (e) {
+    } on Exception catch (e) {
+      print('Tipo de entrada inválida.');
       return 0;
     }
   }

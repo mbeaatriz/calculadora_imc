@@ -8,12 +8,12 @@ void main(List<String> arguments) {
   print("Digite seu nome:");
   String? nome = Utilidade.lerString();
 
-  print("Digite seu peso:");
+  print("Digite seu peso (em kg):");
   double? peso = Utilidade.lerDouble();
 
-  print("Digite sua altura:");
+  print("Digite sua altura (em metros)");
   double? altura = Utilidade.lerDouble();
 
   Pessoa pessoa = Pessoa(nome, peso, altura);
-  pessoa.classificacaoImc();
+  print(pessoa.classificacaoImc());
 }
